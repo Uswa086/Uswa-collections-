@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#190d13">
+  <meta name="description" content="Shop premium ladies and gents unstitched fabrics at Uswa's Collection. Order directly on WhatsApp.">
+  <title>Uswa's Collection | Luxury Unstitched Fabrics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">LUXURY FABRICS • MADE FOR YOUR STYLE • ORDER ON WHATSAPP</div>
+
+  <header class="header">
+    <a href="#home" class="brand">
+      <span class="brand-mark">U</span>
+      <span><b>USWA'S</b><small>COLLECTION</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#shop">Shop Fabrics</a>
+      <a href="#about">Our Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="cart-link" href="#cart">Bag <span id="cartCount">0</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">THE ART OF FINE FABRICS</span>
+        <h1>Feel the Fabric.<br><em>Love the Quality.</em></h1>
+        <p>Discover beautiful unstitched fabrics for every season, every occasion and every style.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#shop">Explore Collection ↗</a>
+          <a class="text-link" href="#about">Discover our story</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>01</strong><span>Premium Feel</span></div>
+          <div><strong>02</strong><span>Beautiful Fabrics</span></div>
+          <div><strong>03</strong><span>Easy Ordering</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-frame">
+          <img src="https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?auto=format&fit=crop&w=1000&q=85" alt="Luxury textile fabric">
+        </div>
+        <div class="floating-note"><span>✦</span><div><b>Elegance in every thread</b><small>USWA'S SIGNATURE COLLECTION</small></div></div>
+        <div class="round-stamp">FABRIC<br>WITH LOVE<br>✦</div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div>✦ Carefully Selected Fabrics</div>
+      <div>✦ Ladies & Gents Collections</div>
+      <div>✦ Convenient WhatsApp Orders</div>
+    </section>
+
+    <section class="section" id="collections">
+      <div class="section-heading">
+        <div><span class="eyebrow">EXPLORE YOUR STYLE</span><h2>Shop by Collection</h2></div>
+        <p>Find the fabric that feels like you.</p>
+      </div>
+      <div class="collection-grid">
+        <a class="collection-card ladies-collection" href="#shop" data-jump="Ladies">
+          <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85" alt="Ladies fabric collection">
+          <div><span>THE WOMEN'S EDIT</span><h3>Ladies' Fabrics</h3><b>Explore Collection ↗</b></div>
+        </a>
+        <a class="collection-card gents-collection" href="#shop" data-jump="Gents">
+          <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=900&q=85" alt="Men's fabric collection">
+          <div><span>TIMELESS ESSENTIALS</span><h3>Gents' Fabrics</h3><b>Explore Collection ↗</b></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section shop-section" id="shop">
+      <div class="section-heading">
+        <div><span class="eyebrow">CURATED FOR YOU</span><h2>Discover Our Fabrics</h2></div>
+        <span class="muted">Unstitched fabrics only</span>
+      </div>
+
+      <div class="shop-tools">
+        <input id="searchInput" type="search" placeholder="Search fabric name..." aria-label="Search fabrics">
+        <select id="categoryFilter" aria-label="Filter category">
+          <option value="All">All collections</option>
+          <option value="Ladies">Ladies</option>
+          <option value="Gents">Gents</option>
+        </select>
+        <select id="fabricFilter" aria-label="Filter fabric type">
+          <option value="All">All fabric types</option>
+          <option value="Lawn">Lawn</option>
+          <option value="Cotton">Cotton</option>
+          <option value="Khaddar">Khaddar</option>
+          <option value="Linen">Linen</option>
+          <option value="Wash & Wear">Wash & Wear</option>
+          <option value="Cambric">Cambric</option>
+        </select>
+        <select id="sortFilter" aria-label="Sort products">
+          <option value="featured">Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="promo-banner">
+      <div><span class="eyebrow">THE PERFECT FABRIC STARTS HERE</span><h2>Your style. Your fabric. Your choice.</h2><p>Browse our range and contact us to confirm availability, quality and delivery details.</p></div>
+      <a class="btn btn-light" href="#shop">Shop the Collection ↗</a>
+    </section>
+
+    <section class="section cart-section" id="cart">
+      <div class="section-heading"><div><span class="eyebrow">YOUR SELECTION</span><h2>Shopping Bag</h2></div></div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-bottom">
+        <p>Product total <strong id="cartTotal">Rs. 0</strong></p>
+        <p class="muted">Delivery charges, if any, will be confirmed with your order.</p>
+        <a href="#checkout" class="btn btn-gold">Continue to Checkout ↗</a>
+        <button id="clearCart" class="text-button">Clear bag</button>
+      </div>
+    </section>
+
+    <section class="section checkout-section" id="checkout">
+      <div class="section-heading"><div><span class="eyebrow">ALMOST THERE</span><h2>Order Details</h2></div></div>
+      <div class="checkout-layout">
+        <div class="checkout-info">
+          <h3>Complete your order</h3>
+          <p>Enter your details. Your order summary will open in WhatsApp so you can send it directly to Uswa's Collection.</p>
+          <p class="muted">Please confirm product availability and payment instructions with us before making a payment.</p>
+          <a class="text-link" href="https://wa.me/923157540218" target="_blank" rel="noopener">Chat with us on WhatsApp ↗</a>
+        </div>
+        <form id="orderForm" class="order-form">
+          <label>Full name<input name="name" required placeholder="Your name"></label>
+          <label>Phone number<input name="phone" required type="tel" placeholder="03XXXXXXXXX"></label>
+          <label>Email (optional)<input name="email" type="email" placeholder="you@example.com"></label>
+          <label>City<input name="city" required placeholder="Your city"></label>
+          <label>Complete delivery address<textarea name="address" required rows="3" placeholder="House, street, area..."></textarea></label>
+          <label>Payment preference
+            <select name="payment" required>
+              <option value="Cash on Delivery">Cash on Delivery</option>
+              <option value="Easypaisa">Easypaisa</option>
+              <option value="JazzCash">JazzCash</option>
+              <option value="Bank Transfer">Bank Transfer</option>
+            </select>
+          </label>
+          <button class="btn btn-gold full-width" type="submit">Send Order on WhatsApp ↗</button>
+          <small class="muted">This website does not collect online payments or store orders in a database.</small>
+        </form>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-image"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=85" alt="Textile craftsmanship"></div>
+      <div class="about-copy"><span class="eyebrow">WELCOME TO USWA'S COLLECTION</span><h2>Quality you can feel.<br><em>Elegance you can choose.</em></h2><p>We bring together ladies' and gents' unstitched fabrics for everyday wear, seasonal looks and special occasions. Explore different fabric types and quality options, then contact us to confirm your selection.</p><p><strong>Our location:</strong> Kacha Khu, Khanewal, Pakistan.</p><a class="btn btn-gold" href="#contact">Get in Touch ↗</a></div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading"><div><span class="eyebrow">WE'RE HERE TO HELP</span><h2>Let's Talk Fabrics</h2></div></div>
+      <div class="contact-grid">
+        <a class="contact-card" href="https://wa.me/923157540218" target="_blank" rel="noopener"><span>◉</span><h3>WhatsApp</h3><p>0315 7540218</p><b>Chat with us ↗</b></a>
+        <a class="contact-card" href="mailto:uswanazish311@gmail.com"><span>✉</span><h3>Email</h3><p>uswanazish311@gmail.com</p><b>Send an email ↗</b></a>
+        <div class="contact-card"><span>⌖</span><h3>Our Location</h3><p>Kacha Khu, Khanewal, Pakistan</p><b>Serving fabric lovers</b></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="brand footer-brand"><span class="brand-mark">U</span><span><b>USWA'S</b><small>COLLECTION</small></span></a>
+    <p>Premium unstitched fabrics, chosen with care.</p>
+    <small>© <span id="year"></span> Uswa's Collection. All rights reserved.</small>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/923157540218" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">☏ <span>WhatsApp Us</span></a>
+</body>
+  </html>
+  
